@@ -1,0 +1,6 @@
+/*site-mainの設定*/
+.site-main {
+    padding-top: 100px; /*ヘッダーの高さ+余白*/
+    min-height: calc(100vh - 630px); /*ヘッダーとフッターの大きさを差し引く*/
+    background: gray; /*メインヘッダの背景色*/
+}

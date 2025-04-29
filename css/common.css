@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+}
+
+/*ヘッダーの設定*/
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /*height: 80px; /*ヘッダーの高さ*/
+    background-color: white; /*ヘッダーの背景色*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    z-index: 1000;
+    padding: 10px 10px;
+    border-bottom: 5px solid palegreen; /*ヘッダー下部の線の色・太さ*/
+    transition: height 0.3s ease; /*ヘッダーの高さ調整*/
+}
+
+/*フッターの設定*/
+.site-footer {
+  border-top: 10px solid palegreen; /*フッター上部の線の色・太さ*/
+}
+
+.footer-top {
+  background-color: lightgray; /*上部フッターの背景色*/
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 400px; /*フッター上部の高さ*/
+  padding: 30px 10px;
+  font-weight: bold; /*文字を太字に設定*/
+  }
+
+.footer-bottom {
+  background-color: darkgray; /*下部フッターの背景色*/
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 150px; /*フッター下部の高さ*/
+  padding: 10px 10px;
+  font-weight: bold; /*文字を太字に設定*/
+  font-size: 35px;
+  }
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  text-align: center;
+  width: 200px;
+  border-right: 2px solid black; /* 右に縦線を引く */
+  padding: 0 10px;
+}
+
+.footer-section a {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: black; /*文字の色*/
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  color: blue; /*リンクが押されたときの色*/
+}
+
+.footer-sub-links a {
+  display: block;
+  margin: 5px 0;
+  font-size: 14px;
+  color: black; /*文字の色*/
+  text-decoration: none;
+}
+
+.footer-sub-links a:hover {
+  color: red; /*リンクが押されたときの色*/
+}
+
+/*ボタンの設定*/
+.nav-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-buttons a {
+  text-decoration: none;
+  color: black; /*文字の色*/
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+  font-weight: bold;
+  font-size: 16px; /*フォントサイズ*/
+}
+
+.nav-buttons a:hover {
+  background-color: lightgray; /*ボタンが押されたときの色*/
+}
+
+/*ロゴの設定*/
+.logo img {
+  height: 40px;
+  width: auto;
+}
