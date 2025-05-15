@@ -6,6 +6,7 @@
     <title>会社名：トップページ</title>
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/calendar.css">
 </head>
 <body>
     <header class="site-header">
@@ -26,6 +27,42 @@
     </header>
 
     <main class="site-main">
+        <!--宣伝スライダー-->
+        <div class="promotion-slider"></div>
+
+        <!--会社の特徴-->
+        <div class="company-features"></div>
+
+        <!--固定のお知らせ-->
+        <div class="fixed-announcement"></div>
+
+        <!--最新のお知らせ(5件)-->
+        <div class="latest-news"></div>
+
+        <!--営業日カレンダー-->
+        <div id="calendar-header">
+            <div class="title">営 業 日 の ご 案 内</div>
+        </div>
+        <div class="calendar">
+            <div id="calendar"></div>
+            <div id="calendar-footer">
+                <div class="color-key-container">
+                    <div class="color-key-block left">
+                        <span class="legend-box open"></span> 営業日
+                    </div>
+                    <div class="color-key-block center">
+                        <span class="legend-box event"></span> イベント日
+                    </div>
+                    <div class="color-key-block right">
+                        <span class="legend-box closed"></span> 休業日
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--お問い合せ-->
+        <div class="contact-form"></div>
+
     </main>
 
     <footer class="site-footer">
@@ -74,5 +111,6 @@
     </footer>
     <!---JavaScriptの読み込み-->
     <script src="js/header.js"></script>
+    <script src="js/calendar.js"></script>
 </body>
 </html>

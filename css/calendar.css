@@ -1,0 +1,141 @@
+/*カレンダー全体の設定*/
+#calendar {
+  width: 100%;
+  max-width: 1000px;
+  margin: 20px auto;
+  font-family: sans-serif;
+}
+
+/*カレンダーのタイトル*/
+#calendar-header .title {
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 2px solid black;
+  padding-bottom: 3px;
+  margin: auto;
+  width: 500px;
+}
+
+/*カレンダーの年月表示の設定*/
+#calendar .calendar-header {
+  text-align: center;
+  font-size: 35px;
+  margin: 20px 0;
+}
+
+/*カレンダーの月シフトボタンの設定*/
+#calendar .calendar-header button {
+  text-align: center;
+  font-size: 20px;
+  padding: 5px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  border-radius: 7px;
+}
+
+/*月シフトボタン無効時の設定*/
+#calendar .calendar-header button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/*カレンダーの表の設定*/
+#calendar table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/*曜日セルの設定*/
+#calendar th {
+  height: 40px;
+  font-weight: bold;
+  font-size: 35px;
+  text-align: center;
+  vertical-align: bottom;
+}
+
+/*日付セルの設定*/
+#calendar td {
+  width: 14.2%;
+  height: 120px;
+  max-width: 120px;
+  font-size: 30px;
+  text-align: center;
+  vertical-align: top;
+  border: 1.5px solid #666;
+}
+
+/*日付の文字の色*/
+#calendar .text-sunday { color: red; }
+#calendar .text-saturday { color: blue; }
+#calendar .text-weekday { color: black; }
+#calendar .text-holiday { color: red;}
+
+/*日付セルの塗りつぶしの色*/
+#calendar .open,
+#calendar-footer .open {
+  background-color: white;
+}
+
+#calendar .event,
+#calendar-footer .event {
+  background-color: lightgreen;
+}
+
+#calendar .closed,
+#calendar-footer .closed {
+  background-color: lightgray;
+}
+
+/*イベントURLの設定*/
+#calendar .event-button {
+  display: block;
+  margin-top: 5px;
+  padding: 2px 5px;
+  font-size: 20px;
+}
+
+/*セルの塗りつぶしの凡例用の設定*/
+#calendar-footer .color-key-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 800px;
+  margin: 20px auto;
+  font-size: 20px;
+  text-align: center;
+}
+
+/*セルの塗りつぶしの凡例用の設定*/
+#calendar-footer .color-key-block {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*セルの塗りつぶしの凡例用の設定（位置：左）*/
+#calendar-footer .color-key-block.left {
+  justify-content: flex-start;
+}
+
+/*セルの塗りつぶしの凡例用の設定（位置：中央）*/
+#calendar-footer .color-key-block.center {
+  justify-content: center;
+}
+
+/*セルの塗りつぶしの凡例用の設定（位置：右）*/
+#calendar-footer .color-key-block.right {
+  justify-content: flex-end;
+}
+
+/*セルの塗りつぶしの凡例用の設定（箱）*/
+#calendar-footer .legend-box {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  border: 1px solid #666;
+  vertical-align: middle;
+}
