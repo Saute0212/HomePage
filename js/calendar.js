@@ -4,7 +4,8 @@ let currentMonth;
 
 //JSONファイルを非同期で読み込む
 async function loadJSON(path) {
-    const response = await fetch(path);
+    const cacheBuster = `?_=${new Date().getTime()}`;
+    const response = await fetch(path + cacheBuster);
     if (!response.ok) throw new Error(`Failed to load ${path}`);
     return await response.json();
   }
@@ -20,7 +21,7 @@ async function checkJsonExists(year, month) {
   }
   const file = `calendar/${year}_${String(month).padStart(2, '0')}.json`;
   try {
-    const response = await fetch(file, { method: 'GET' });
+    const response = await fetch(file + `?_=${new Date().getTime()}`, { method: 'GET' });
     return response.ok;
   } catch {
     return false;
